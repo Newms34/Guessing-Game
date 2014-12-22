@@ -1,0 +1,237 @@
+html,body {
+height:100%;
+width:100%;
+background: -webkit-radial-gradient(#262,#222); /* Safari 5.1 to 6.0 */
+background: -o-radial-gradient(#262,#222); /* For Opera 11.6 to 12.0 */
+background: -moz-radial-gradient(#262,#222); /* For Firefox 3.6 to 15 */
+background: radial-gradient(#262,#222); /* Standard syntax */
+color:#fff;
+}
+.buttons{
+height :40px;
+border-radius: 5%;
+background:#ccc;
+color: #000;
+text-align: center;
+font-size: 18pt;
+font-family: 'arial';
+font-weight:bold;
+cursor:pointer;
+border:3px outset #111;
+box-shadow: 1px 1px 2px #000;
+}
+#theGuess{
+width:70%;
+height:40px;
+position:relative;
+margin-left: 5%;
+color:#fff;
+background-color: #000;
+}
+#guessNumBox{
+width:50%;
+background-color: rgba(34,34,34,.9);
+padding:1%;
+position:relative;
+top:5%;
+margin-left: auto;
+margin-right: auto;
+z-index: 5;
+}
+#guessNumBox:hover {
+background-color: rgba(34,34,68,.9);
+}
+#guessSub{
+display:inline-block;
+width:40%;
+position:relative;
+left: 6%;
+transition-duration:.5s;
+animation: none;
+}
+#guessSub:hover{
+background:#bfb;
+border-color: #bfb;
+animation: bounce 2s infinite;
+}
+#helpMe{
+display:inline-block;
+width:40%;
+position:relative;
+left: 15%;
+transition-duration:.5s;
+cursor:help;
+}
+#helpMe:hover{
+background:#ccf;
+border-color:#ccf;
+animation: ohno 2s infinite;
+}
+#stats {
+display:inline-block;
+width:40%;
+position:relative;
+left: 6%;
+}
+#resetBut {
+display:inline-block;
+width:40%;
+position:relative;
+left: 15%;
+transition-duration:5s;
+background-image: none;
+background-size: contain;
+}
+#inst {
+text-align: center;
+position:relative;
+width:90%;
+background-color: #333;
+margin-left: auto;
+margin-right: auto;
+padding:5px;
+margin-bottom: 2%;
+font-size:x-large;
+box-shadow: 0 0 2px #fff;
+}
+#inst>ul{
+    text-align:left;
+    font-size: smaller;
+}
+
+#brainDiv {
+z-index:1;
+background-color: #f69;
+position:absolute;
+top:5%;
+left:40%;
+margin-left: auto;
+margin-right: auto;
+width: 300px;
+height: 170px;
+border-radius: 50%;
+box-shadow: 0 0 8px #00f;
+}
+#brainStem{
+width:0px;
+height:0px;
+position: absolute;
+right:0px;
+bottom:-45px;
+border-left: 70px solid transparent;
+border-right: 70px solid transparent;
+border-top: 120px solid #f69;
+}
+/*Meter stuff*/
+#meter{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px outset #aaa;
+    background-color: #222;
+    position:relative;
+    left:-2px;
+    z-index:0;
+    transition-duration: .5s;
+    top:-9px;
+}
+#needleBack{
+    position: relative;
+    width:100%;
+    height:10px;
+    top:47%;
+    transition-duration: .5s;
+}
+#needle{
+    width:0px;
+    height:0px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    border-bottom: 5px solid transparent;
+    border-right: 100px solid #fff;
+    border-top: 5px solid transparent;
+}
+
+#icicles{
+    width:199px;
+    height:200px;
+    background-image:url('ice.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top:5%;
+}
+#higher{
+    position: relative;
+    width:120px;
+    top:7%;
+    left:35%;
+    color:#555;
+    border-radius: 3px;
+    background: rgba(34,34,34,.5)
+}
+#lower{
+    position: relative;
+    width:120px;
+    left:35%;
+    color:#555;
+    border-radius: 3px;
+    background: rgba(34,34,34,.5)
+}
+#diag{
+    width:45%;
+    height:75%;
+    padding:15px;
+    position:fixed;
+    background-color: rgba(12,12,12,.95);
+    border-radius:5px;
+    font-family: 'comic sans ms';
+    font-size: x-large;
+    top: 15px;
+    left:25%;
+    z-index: 99;
+    box-shadow: 5px 5px 5px #000;
+    display:none;
+    text-align:center;
+}
+#history{
+    position: fixed;
+    right:5px;
+    top:5px;
+    padding: 5px;
+    width:20%;
+    height: 400px;
+    background: rgba(12,12,12,.9);
+    color: #fff;
+    overflow-y:  scroll;
+}
+
+
+/*Animation frames*/
+@keyframes bounce {
+0% {top: 0%;}
+10% {top: 0%;}
+20% {top: -3%;}
+30% {top: 0%;}
+40% {top: 0%;}
+50% {top: -3%;}
+60% {top: 0%;}
+100% {top: 0%;}
+}
+
+@keyframes ohno {
+0% {background-color: #ccc;color:#222;}
+25% {background-color: #ccf;color:#922;}
+50% {background-color: #ccc;color:#222;}
+75% {background-color: #fcc;color:#229;}
+100% {background-color: #ccc;color:#222;}
+}
+
+@keyframes flare {
+    0% {box-shadow: 0 0 5px 7px #a22;}
+    50% {box-shadow: 0 0 7px 9px #a22;}
+    100% {box-shadow: 0 0 5px 7px #a22;}
+}

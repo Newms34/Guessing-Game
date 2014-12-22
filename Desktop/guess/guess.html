@@ -1,0 +1,35 @@
+<html>
+<head><title>Guessing Game!</title>
+<link rel='stylesheet' href='guess.css'/>
+</head>
+<body>
+<div id='guessNumBox'>
+<div id='inst'> I'm thinking of a number. Go ahead and guess it!
+<hr/>
+<ul>
+    <li>Enter your guess in the box below and click 'GUESS'!</li>
+    <li>Keep an eye on the meter!</li>
+    <li>If your guess is too low, the needle will point up!</li>
+    <li>If your guess is too high, the needle will point down!</li>
+    <li id='guessesLeft'>You have 5 guesses left!</li>
+</ul>
+
+</div>
+<input type='text' id='theGuess'/><hr/>
+<div id = 'guessSub' class='buttons' title='Guess this number' onclick='guessMe()'>GUESS!</div><div id = 'helpMe' class='buttons' title='Help me!' onclick='hint()'>Help!</div>
+<hr width='30%'/>
+<div id = 'stats' class='buttons' title='See your win/loss count!' onclick='stats();'>How am I doing?</div><div id = 'resetBut' class='buttons' title='Reset!' onclick='resetConf();'>Reset!</div>
+</div>
+<div id='brainDiv'><div id='brainStem'>&nbsp;</div></div>
+
+
+<div id='higher'>GUESS HIGHER</div>
+<div id='icicles'><div id ='meter'><div id='needleBack'><div id='needle'>&nbsp;</div></div></div></div>
+
+<div id='lower'>GUESS LOWER</div>
+<div id='diag'>DIALOGUE HERE!</div>
+<div id='history'>Game History<hr/></div>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.js"></script>
+<script src="./guess.js"></script>
+</body>
+</html>
